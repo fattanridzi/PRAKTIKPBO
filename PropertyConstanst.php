@@ -17,8 +17,19 @@ class Product{
     public function pajak() {
         return self::PAJAK * 100;
 
+
+    }    
+
+    public function __construct($kode, $nama, $harga, $stock) {
+        $this->kode = $kode;
+        $this->nama = $nama;
+        $this->harga = $harga;
+        $this->stock = $stock;   
         
+        
+
     }
+    
 
     public function total() {
         return $this->harga + ($this->harga * self::PAJAK);
@@ -28,11 +39,7 @@ class Product{
 
 
 //object
-$product = new Product();
-$product->kode = 'h15';
-$product->nama = 'LAPTOP';
-$product->harga = 10000000;
-$product->stock = 5;
+$product = new Product('h15', 'LAPTOP', 10000000, 5);
 
 
 echo "product: " . $product -> nama;
