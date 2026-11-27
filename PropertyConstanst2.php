@@ -2,7 +2,7 @@
 
 namespace Pbo\Marketplace;
 
-class Product {
+trait Product {
 
     private string $kode;
     private string $nama;
